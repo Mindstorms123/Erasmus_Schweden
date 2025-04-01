@@ -10,4 +10,4 @@ response2 = client.toggle_magnet(TRUE) // TRUE oder FALSE
 print("Magnet response", response2)
 
 response3 = client.shutdown_server()
-print("Server shutdown", response3)
+print("Server shutdown")
