@@ -61,7 +61,7 @@ class GreifarmClient {
 }
 
 // Beispielnutzung
-let client = GreifarmClient(serverIP: "192.168.1.100") // IP anpassen
+let client = GreifarmClient(serverIP: "put IP Address here") // IP anpassen
 client.sendServoPositions(x: 120, y: 150, z: 200) { response in
     print("Antwort: \(response)")
 }
