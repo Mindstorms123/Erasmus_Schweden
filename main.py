@@ -14,15 +14,15 @@ pause = 4 # in sekounds
 
 
 # Wifi data
-ssid = #include wifi ssid here like 'wifiname'
-wlPw = #include wifi password here like 'password'
+ssid = 'IoTRaum103'
+wlPw = 'IoTRaum103'
 rp2.country('DE')
 PORT = 8005
 
 # initialize servo and i2c
-sda = Pin(0)
-scl = Pin(1)
-i2c_id = 0
+sda = Pin(18)
+scl = Pin(19)
+i2c_id = 1
 i2c = I2C(id=i2c_id, sda=sda, scl=scl)
 pca = PCA9685(i2c=i2c)
 servo = Servos(i2c=i2c)
@@ -35,17 +35,17 @@ display = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 time.sleep(0.1)
 
 # Display test
-#print('Text zeilenweise darstellen')
-#display.text('Hallo World 1', 0, 0) # Text, X, Y
-#display.text('Hallo World 2', 0, 10)
-#display.text('Hallo World 3', 0, 20)
-#display.text('Hallo World 4', 0, 30)
-#display.text('Hallo World 5', 0, 40)
-#display.text('Hallo World 6', 0, 50)
-#display.text('Hallo World 7', 0, 60)
-#display.show()
+print('Text zeilenweise darstellen')
+display.text('Hallo World 1', 0, 0) # Text, X, Y
+display.text('Hallo World 2', 0, 10)
+display.text('Hallo World 3', 0, 20)
+display.text('Hallo World 4', 0, 30)
+display.text('Hallo World 5', 0, 40)
+display.text('Hallo World 6', 0, 50)
+display.text('Hallo World 7', 0, 60)
+display.show()
 
-#time.sleep(pause)
+time.sleep(pause)
 
 # delete Display 
 print('Display deleted')
